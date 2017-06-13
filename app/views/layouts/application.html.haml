@@ -18,27 +18,42 @@
             .span.icon-bar
             .span.icon-bar
             .span.icon-bar
-          .a.navbar-brand{href: root_path} FLXPAY
+          .a.navbar-brand{href: root_path} Demo
         .collapse.navbar-collapse#navbar
           %ul.nav.navbar-nav
             %li
               = link_to 'Dashboard', '#'
             %li
-              = link_to 'Vouchers', '#'
+              = link_to 'Friends', '#'
             %li
-              = link_to 'Reports', '#'
+              = link_to 'Profile', '#'
             %li
-              = link_to 'Users', '#'
+              = link_to 'Tasks', '#'
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to "Update profile [examle]", '#'
             %li
               = link_to 'Sign out', '#', method: :delete
-    %main{role: "main"}
-      - flash.each do |name, msg|
-        - if msg.is_a?(String)
-          .alert{"alert-#{alert_type(name)}"}
-            .button.close{type:"button", 'data-dismiss': "alert", 'aria-hidden':"true"} ×
-            = content_tag :div, msg, id: "flash_#{name}"
-      .container-fluid
-        = yield
+    .container-fluid
+      .row
+        .col-lg-3.col-md-3.col-sm-3
+          .list-group.table-of-contents
+            %a.list-group-item{:href => "#navbar"} Navbar
+            %a.list-group-item{:href => "#buttons"} Buttons
+            %a.list-group-item{:href => "#typography"} Typography
+            %a.list-group-item{:href => "#tables"} Tables
+            %a.list-group-item{:href => "#forms"} Forms
+            %a.list-group-item{:href => "#navs"} Navs
+            %a.list-group-item{:href => "#indicators"} Indicators
+            %a.list-group-item{:href => "#progress-bars"} Progress bars
+            %a.list-group-item{:href => "#containers"} Containers
+            %a.list-group-item{:href => "#dialogs"} Dialogs
+        .col-lg-9.col-md-9.col-sm-9
+          %main{role: "main"}
+            - flash.each do |name, msg|
+              - if msg.is_a?(String)
+                .alert{class: "alert-#{alert_type(name)}"}
+                  .button.close{type:"button", 'data-dismiss': "alert", 'aria-hidden':"true"} ×
+                  = content_tag :div, msg, id: "flash_#{name}"
+            .container-fluid
+              = yield
