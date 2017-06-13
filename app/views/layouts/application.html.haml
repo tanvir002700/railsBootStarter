@@ -6,7 +6,6 @@
       = content_for?(:title) ? yield(:title) : 'Flxpay'
     %meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Flxpay'}"
     = stylesheet_link_tag 'application', media: 'all'
-    -#= stylesheet_link_tag 'layouts/admin', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
@@ -33,14 +32,12 @@
             %li
               = link_to "Update profile [examle]", '#'
             %li
-              -#= image_tag current_user.avatar.thumb.url
-            %li
               = link_to 'Sign out', '#', method: :delete
     %main{role: "main"}
       - flash.each do |name, msg|
         - if msg.is_a?(String)
           .alert{"alert-#{alert_type(name)}"}
-            .button.close[type="button", 'data-dismiss': "alert", 'aria-hidden':"true"] ×
+            .button.close{type:"button", 'data-dismiss': "alert", 'aria-hidden':"true"} ×
             = content_tag :div, msg, id: "flash_#{name}"
       .container-fluid
-        == yield
+        = yield

@@ -1,0 +1,28 @@
+body {
+  min-height: 500px;
+  padding-top: 70px;
+
+  ul.navbar-right{margin-right: 0px;}
+
+  table {
+    tbody, thead, tfoot {
+      tr {
+        td.td-ellipsis {
+          max-width: 1px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  form {
+    .form-group.required {
+      label:after {
+        content: " *";
+        color: red;
+      }
+    }
+  }
+}
