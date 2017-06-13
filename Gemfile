@@ -19,7 +19,7 @@ gem 'mini_magick'
 gem 'mysql2', '~> 0.3.18'
 gem 'puma', '~> 3.0'
 gem 'pundit'
-gem 'rails', '~> 5.0.3'
+gem 'rails', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'slim-rails'
 gem 'tzinfo-data', platforms: %I[mingw mswin x64_mingw jruby]
