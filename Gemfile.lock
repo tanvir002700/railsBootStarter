@@ -180,6 +180,7 @@ GEM
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -218,7 +219,12 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_layout (1.0.41)
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.1.1)
       actionpack (= 5.1.1)
       activesupport (= 5.1.1)
@@ -346,7 +352,6 @@ DEPENDENCIES
   faker
   foreman
   haml-rails (~> 0.9)
-  html2haml
   jbuilder (~> 2.5)
   jquery-rails
   kaminari
@@ -355,12 +360,14 @@ DEPENDENCIES
   mini_magick
   mysql2 (~> 0.3.18)
   nested_scaffold
+  pg
   pry-rails
   pry-rescue
   puma (~> 3.0)
   pundit
   rails (~> 5.1)
   rails-controller-testing
+  rails_12factor
   rails_layout
   rspec-rails
   rubocop

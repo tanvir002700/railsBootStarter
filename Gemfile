@@ -16,7 +16,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
-gem 'mysql2', '~> 0.3.18'
 gem 'puma', '~> 3.0'
 gem 'pundit'
 gem 'rails', '~> 5.1'
@@ -51,12 +50,18 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'mysql2', '~> 0.3.18'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop'
   gem "haml-rails", "~> 0.9"
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :test do
