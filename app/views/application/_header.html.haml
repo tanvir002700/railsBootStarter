@@ -6,13 +6,13 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"} Rails Demo
+      %a.navbar-brand{ href: root_path } Rails Demo
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#"} Dashboard
+          =link_to 'Dash Board', root_path
         %li
-          %a{:href => "#"} Settings
+          =link_to 'Settings', edit_user_registration_path
         %li
           %a{:href => "#"} Profile
         %li

@@ -79,7 +79,7 @@ docker-compose.yml
 /nbproject/
 
 # RubyMine project files
-.idea/
+.idea/**/*
 
 # Textmate project files
 /*.tmproj
