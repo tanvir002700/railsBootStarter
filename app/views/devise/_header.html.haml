@@ -10,10 +10,8 @@
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#"} Sign in
+          =link_to 'Sign In', new_session_path(resource_name)
         %li
-          %a{:href => "#"} Sign up
-        %li
-          %a{:href => "#"} Profile
+          =link_to 'Sign Up', new_registration_path(resource_name)
         %li
           %a{:href => "#"} Help
