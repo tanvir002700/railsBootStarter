@@ -10,11 +10,11 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    =render 'layouts/header'
+    =render 'application/header'
 
     .container-fluid
       .row
-        =render 'layouts/sidebar'
+        =render 'application/sidebar'
         .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
           =render 'application/flash_msg'
           = yield
