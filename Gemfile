@@ -28,9 +28,7 @@ gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 
 group :development do
   gem 'better_errors'
-  gem 'dockerize_rails'
   gem 'foreman'
-  gem 'html2slim'
   gem 'listen', '~> 3.0.5'
   gem 'nested_scaffold'
   gem 'rails_layout'
