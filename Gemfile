@@ -16,11 +16,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
+gem "haml-rails", "~> 0.9"
 gem 'puma', '~> 3.0'
 gem 'pundit'
 gem 'rails', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
-gem 'slim-rails'
 gem 'tzinfo-data', platforms: %I[mingw mswin x64_mingw jruby]
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
@@ -56,7 +56,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'rspec-rails'
   gem 'rubocop'
-  gem "haml-rails", "~> 0.9"
 end
 
 group :production do
