@@ -10,50 +10,10 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
-    .nav.navbar.navbar-inverse.navbar-fixed-top
-      .container-fluid
-        .navbar-header
-          %button.navbar-toggle.collapsed{type: "button", 'data-toggle': "collapse", 'data-target': "#navbar"}
-            .span.sr-only Toggle navigation
-            .span.icon-bar
-            .span.icon-bar
-            .span.icon-bar
-          .a.navbar-brand{href: root_path} Demo
-        .collapse.navbar-collapse#navbar
-          %ul.nav.navbar-nav
-            %li
-              = link_to 'Dashboard', '#'
-            %li
-              = link_to 'Friends', '#'
-            %li
-              = link_to 'Profile', '#'
-            %li
-              = link_to 'Tasks', '#'
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              = link_to "Update profile [examle]", '#'
-            %li
-              = link_to 'Sign out', '#', method: :delete
+    =render 'layouts/header'
+
     .container-fluid
       .row
-        .col-lg-3.col-md-3.col-sm-3
-          .list-group.table-of-contents
-            %a.list-group-item Link - 1
-            %a.list-group-item Link - 2
-            %a.list-group-item Link - 3
-            %a.list-group-item Link - 4
-            %a.list-group-item Link - 5
-            %a.list-group-item Link - 6
-            %a.list-group-item Link - 7
-            %a.list-group-item Link - 8
-            %a.list-group-item Link - 9
-            %a.list-group-item Link - 10
-        .col-lg-9.col-md-9.col-sm-9
-          %main{role: "main"}
-            - flash.each do |name, msg|
-              - if msg.is_a?(String)
-                .alert{class: "alert-#{alert_type(name)}"}
-                  .button.close{type:"button", 'data-dismiss': "alert", 'aria-hidden':"true"} ×
-                  = content_tag :div, msg, id: "flash_#{name}"
-            .container-fluid
-              = yield
+        =render 'layouts/sidebar'
+        .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+          = yield
