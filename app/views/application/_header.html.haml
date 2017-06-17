@@ -10,9 +10,9 @@
     #navbar.navbar-collapse.collapse
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#"} Dashboard
+          =link_to 'Dash Board', root_path
         %li
-          %a{:href => "#"} Settings
+          =link_to 'Settings', edit_user_registration_path
         %li
           %a{:href => "#"} Profile
         %li
