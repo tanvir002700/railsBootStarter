@@ -1,12 +1,8 @@
 feature 'Navigation links', :devise do
-  scenario 'view navigation links for admin' do
-    user = FactoryGirl.create(:admin)
-    login_as(user, scope: :user)
+  scenario 'view navigation links for user' do
+    user = FactoryGirl.create(:user)
+    signin(user.email, user.password)
     visit root_path
-    expect(page).to have_content 'Dashboard'
-    expect(page).to have_content 'Vouchers'
-    expect(page).to have_content 'Reports'
-    expect(page).to have_content 'Users'
-    expect(page).to have_content 'Sign out'
+    expect(page).to have_content 'Sign Out'
   end
 end
