@@ -12,7 +12,8 @@
   %body
     =render current_user.nil? ? 'devise/header' : 'application/header'
 
-    .container
+    .container-fluid
       .row
-        .col-xs-12.col-md-12
+        .col-xs-12.col-md-12.main
+          =render 'application/flash_msg'
           =yield
