@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/rails-demo.iml" filepath="$PROJECT_DIR$/.idea/rails-demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/railsBootStarter.iml" filepath="$PROJECT_DIR$/.idea/railsBootStarter.iml" />
     </modules>
   </component>
 </project>
