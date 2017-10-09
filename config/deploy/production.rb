@@ -1,7 +1,7 @@
 set :stage, :production
 set :branch, 'master'
 
-set :server_name, "#{fetch(:application)}_#{fetch(:stage)}"
+set :server_name, 'application.prod'
 set :server_port, 80
 set :server_port_ssl, 443
 
@@ -32,5 +32,4 @@ set :puma_init_active_record, false
 set :puma_preload_app, true
 set :puma_plugins, [:tmp_restart]
 set :nginx_use_ssl, false
-set :nginx_sites_available_path, '/etc/nginx/available.d'
-set :nginx_sites_enabled_path, '/etc/nginx/conf.d'
+

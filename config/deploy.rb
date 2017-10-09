@@ -20,7 +20,7 @@ set :keep_releases, 5
 
 set :bundle_binstubs, nil
 
-set :linked_files, %w(config/database.yml config/secrets.yml)
+set :linked_files, %w(config/application.yml config/database.yml config/secrets.yml)
 
 set(
   :linked_dirs,
@@ -34,6 +34,7 @@ set(
   :config_files,
   %w(
     nginx.conf
+    application.yml.template
     database.yml.template
     secrets.yml.template
     log_rotation
@@ -49,7 +50,7 @@ set(
   [
     {
       source: 'nginx.conf',
-      link: '/etc/nginx/conf.d/{{full_app_name}}.conf'
+      link: '/etc/nginx/sites-enabled/{{full_app_name}}.conf'
     },
     {
       source: 'puma_init.sh',
