@@ -8,7 +8,7 @@ set :server_port_ssl, 3443
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
 # Don't forget to put your server ip
-server '0.0.0.0', user: fetch(:deploy_user).to_s, roles: %w(web app db), primary: true
+server '192.168.33.10', user: fetch(:deploy_user).to_s, roles: %w(web app db), primary: true
 
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 
