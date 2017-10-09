@@ -24,6 +24,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'tzinfo-data', platforms: %I[mingw mswin x64_mingw jruby]
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
+gem 'mysql2', '~> 0.3.18'
 
 group :development do
   gem 'better_errors'
@@ -50,7 +51,6 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'mysql2', '~> 0.3.18'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rails-controller-testing'

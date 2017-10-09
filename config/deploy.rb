@@ -3,10 +3,10 @@
 # bundle exec cap staging deploy
 #
 
-lock '3.8.0'
+lock '3.8.1'
 
 set :application, 'application'
-set :repo_url, '#' # Put Git url (Ex: git@github.com:user/repo.git)
+set :repo_url, 'git@github.com:tanvir002700/railsBootStarter.git' # Put Git url (Ex: git@github.com:user/repo.git)
 set :deploy_user, 'deployer'
 set :pty, true
  
@@ -20,7 +20,7 @@ set :keep_releases, 5
 
 set :bundle_binstubs, nil
 
-set :linked_files, %w(config/application.yml config/database.yml config/secrets.yml)
+set :linked_files, %w(config/database.yml config/secrets.yml)
 
 set(
   :linked_dirs,
@@ -34,7 +34,6 @@ set(
   :config_files,
   %w(
     nginx.conf
-    application.yml.template
     database.yml.template
     secrets.yml.template
     log_rotation
