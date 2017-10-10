@@ -14,6 +14,12 @@ module Api
           format.json { render json: {user: resource.email, token: token} }
         end
       end
+
+      protected
+
+      def resource_name
+        :user
+      end
     end
   end
 end
