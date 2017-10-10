@@ -14,17 +14,20 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
+gem 'jwt'
 gem 'kaminari'
 gem 'mini_magick'
 gem "haml-rails", "~> 0.9"
 gem 'puma', '~> 3.0'
 gem 'pundit'
 gem 'rails', '~> 5.1'
+gem 'rack-cors', require: 'rack/cors'
 gem 'sass-rails', '~> 5.0'
 gem 'tzinfo-data', platforms: %I[mingw mswin x64_mingw jruby]
 gem 'uglifier', '>= 1.3.0'
 gem 'validates_email_format_of', '~> 1.6', '>= 1.6.3'
 gem 'mysql2', '~> 0.3.18'
+
 
 group :development do
   gem 'better_errors'
